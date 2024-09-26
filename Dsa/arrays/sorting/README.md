@@ -1,8 +1,7 @@
 # Sorting
-
+---
 ## Bubble Sort
 
----
 
 Bubble Sort is an algorithm that sorts an array from the lowest value to the highest value.
 
@@ -16,7 +15,6 @@ Bubble Sort is an algorithm that sorts an array from the lowest value to the hig
 
 ## Selection Sort
 
----
 
 Selection Sort is an algorithm that finds the lowest value in an array and moves it to the sorted part of the array.
 
