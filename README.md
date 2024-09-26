@@ -3,6 +3,10 @@
 <h4>Topics That I am Going to Learn</h4>
 <ol>
   <li>Array</li>
+    <ul>
+      <h4>Sorting</h4>
+      <li>Bubble Sort</li>
+    </ul>
   <li>Stacks</li>
   <li>Linked Lists
     <ul>
