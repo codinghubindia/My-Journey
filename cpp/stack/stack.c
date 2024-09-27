@@ -44,30 +44,30 @@ void display () {
     else printf("Stack is Empty\n");
 }
 
-// int main() {
-//     while(1) {
-//         int a;
-//         printf("Enter from Following\n1 - Push\n2 - Pop\n3 - Display\n4 - Check Pallindrom\n5 - Exit\n");
-//         scanf("%d", &a);
+int main() {
+    while(1) {
+        int a;
+        printf("Enter from Following\n1 - Push\n2 - Pop\n3 - Display\n4 - Check Pallindrom\n5 - Exit\n");
+        scanf("%d", &a);
 
-//         if(a == 5) break;
+        if(a == 5) break;
 
-//         switch(a) {
-//             case 1:
-//                 push();
-//                 break;
-//             case 2:
-//                 pop();
-//                 break;
-//             case 3:
-//                 display();
-//                 break;
-//             case 4:
-//                 pallindrome();
-//                 break;
-//             default:
-//                 printf("Invalid Option\n");
-//         }
-//     }
-//     return 0;
-// }
+        switch(a) {
+            case 1:
+                push();
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                display();
+                break;
+            case 4:
+                pallindrome();
+                break;
+            default:
+                printf("Invalid Option\n");
+        }
+    }
+    return 0;
+}
