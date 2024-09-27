@@ -38,11 +38,11 @@ void pallindrome() {
     return;
 }
 
-void display () {
-    if(top != -1)
-        for(int i = top; i >= 0; i--) printf("%d\t",stack[i]);
-    else printf("Stack is Empty\n");
-}
+// void display () {
+//     if(top != -1)
+//         for(int i = top; i >= 0; i--) printf("%d\t",stack[i]);
+//     else printf("Stack is Empty\n");
+// }
 
 int main() {
     while(1) {
