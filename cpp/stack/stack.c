@@ -4,57 +4,76 @@
 int stack[100];
 int top = -1;
 
-void push() {
-    int elem;
-    printf("Enter the Element to Push\n");
-    scanf("%d",&elem);
+void push(int elem) {
     stack[++top] = elem;
-    return;
 }
 
 void pop() {
-    if(top == -1) {
-        printf("Stack is Empty");
+    if (top == -1) {
+        printf("Stack is Empty\n");
     } else {
         --top;
     }
 }
 
 void pallindrome() {
-    char ar[100];
-    printf("Enter the Numbers: ");
-    scanf("%s", ar);
+    char num[100];
+    printf("Enter the Numbers: \n");
+    scanf("%s", num);
+    
     int i = 0;
-    int len = strlen(ar);
-    int j = len-1;
-    for(i; i < (len-1) / 2 ; i++){
-        if(ar[i] != ar[j] ){
-            printf("It is not a Pallindrom\n");
+    top = -1;  // Reset stack
+
+    // Push characters to stack
+    while (num[i] != '\0') {
+        push(num[i]);
+        i++;
+    }
+
+    // Displaying stack (for debugging purposes)
+    printf("Stack contents: ");
+    for (i = 0; i <= top; i++) {
+        printf("%c\t", stack[i]);
+    }
+    printf("\n");
+
+    // Check if the number is a palindrome
+    int j = 0;
+    for (i = top; i > j; i--, j++) {
+        if (stack[i] != stack[j]) {
+            printf("%s is Not a Palindrome\n", num);
             return;
         }
-        j--;
     }
-    printf("It is a Pallindrome\n");
-    return;
+
+    printf("%s is a Palindrome\n", num);
 }
 
-void display () {
-    if(top != -1)
-        for(int i = top; i >= 0; i--) printf("%d\t",stack[i]);
-    else printf("Stack is Empty\n");
+void display() {
+    if (top != -1) {
+        printf("Stack contents: ");
+        for (int i = top; i >= 0; i--) {
+            printf("%c\t", stack[i]);
+        }
+        printf("\n");
+    } else {
+        printf("Stack is Empty\n");
+    }
 }
 
 int main() {
-    while(1) {
-        int a;
-        printf("Enter from Following\n1 - Push\n2 - Pop\n3 - Display\n4 - Check Pallindrom\n5 - Exit\n");
+    while (1) {
+        int a, elem;
+        printf("Enter from Following:\n1 - Push\n2 - Pop\n3 - Display\n4 - Check Palindrome\n5 - Exit\n");
         scanf("%d", &a);
 
-        if(a == 5) break;
+        if (a == 5) break;
 
-        switch(a) {
+        switch (a) {
             case 1:
-                push();
+                printf("Enter the Element to Push: \n");
+                scanf("%d", &elem);
+                push(elem);
                 break;
             case 2:
                 pop();
