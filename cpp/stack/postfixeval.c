@@ -36,6 +36,6 @@ int evaluate(char *exp) {
     char ch = exp[i];
     int num1, num2, result;
     while(ch != '\0') {
-        
+        if(ch >= )
     }
 }
